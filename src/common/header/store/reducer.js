@@ -3,6 +3,7 @@ import { fromJS } from 'immutable';
 
 const defaultStore = fromJS({
     focused: false,
+    list: []
 });
 
 export default (state = defaultStore, action) => {
@@ -17,6 +18,9 @@ export default (state = defaultStore, action) => {
         // const newState = JSON.parse(JSON.stringify(state));
         // newState.focused = true;
         return state.set('focused', false);
+    }
+    if (action.type === constants.CHANGE_LIST) {
+        return state.set('list', action.data);
     }
     return state;
 }
