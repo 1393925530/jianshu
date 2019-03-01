@@ -53,7 +53,7 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        focused: state.header.get('focused'), //state为reducer返回的state
+        focused: state.getIn(['header', 'focused'])//state为reducer返回的state
     }
 }
 
