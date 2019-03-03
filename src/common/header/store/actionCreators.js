@@ -17,11 +17,11 @@ export const searchBlur = () => ({
 })
 
 export const mouseEnter = () => ({
-    type: constants.Mouse_ENTER
+    type: constants.MOUSE_ENTER
 })
 
 export const mouseLeave = () => ({
-    type: constants.Mouse_LEAVE
+    type: constants.MOUSE_LEAVE
 })
 
 export const changePage = (page) => ({

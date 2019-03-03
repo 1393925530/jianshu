@@ -20,9 +20,9 @@ export default (state = defaultStore, action) => {
                 list: action.data,
                 totalPage: action.totalPage
             });
-        case constants.Mouse_ENTER:
+        case constants.MOUSE_ENTER:
             return state.set('mouseIn', true);
-        case constants.Mouse_LEAVE:
+        case constants.MOUSE_LEAVE:
             return state.set('mouseIn', false);
         case constants.CHANGE_PAGE:
             return state.set('page', action.page);
