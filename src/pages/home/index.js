@@ -4,12 +4,12 @@ import Topic from './components/Topic';
 import List from './components/List';
 import Recommend from './components/Recommend';
 import Writer from './components/Writer';
-import axios from 'axios';
-import { 
-    HomeWrapper, 
-    HomeLeft, 
+import { actionCreators } from './store';
+import {
+    HomeWrapper,
+    HomeLeft,
     HomeRight
- } from './style';
+} from './style';
 
 class Home extends Component {
     render() {
@@ -28,22 +28,13 @@ class Home extends Component {
         )
     }
     componentDidMount() {
-        axios.get('/api/home.json').then((res) => {
-            const result = res.data.data;
-            const action = {
-                type: 'change_home_data',
-                topicList: result.topicList,
-                articleList: result.articleList,
-                recomendList: result.recomendList,
-            }
-            this.props.changeHomeData(action);
-            console.log(result);
-        })
+        this.props.changeHomeData();
     }
 }
 
 const mapDispatch = (dispatch) => ({
-    changeHomeData(action) {
+    changeHomeData() {
+        const action = actionCreators.getHomeInfo();
         dispatch(action);
     }
 })
