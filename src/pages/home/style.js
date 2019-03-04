@@ -78,3 +78,23 @@ export const ListInfo = styled.div`
     color: #999;
   }
 `
+
+export const RecommendList = styled.div`
+  overflow: hidden;
+  width: 280px;
+  padding: 30px 0 0;
+`
+
+export const RecommendItem = styled.div`
+  float: left;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  .pic {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+`
