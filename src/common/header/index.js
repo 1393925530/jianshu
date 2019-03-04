@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
 import { 
@@ -59,6 +60,7 @@ class Header extends Component {
         const { focused, handleInputFocus, handleInputBlur, list } = this.props;
         return (
             <HeaderWrapper>
+                <Link to='/'>
                 <Logo />
                 <Nav>
                     <NavItem className='left active'>首页</NavItem>
@@ -91,6 +93,7 @@ class Header extends Component {
                     </Button>
                     <Button className='reg'>注册</Button>
                 </Addition>
+                </Link>
             </HeaderWrapper>
         )
     }
