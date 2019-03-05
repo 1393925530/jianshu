@@ -5,7 +5,7 @@ import { GlobalStyled } from './style.js';
 import { IconFontStyled } from './statics/iconfont/iconfont';
 import Header from './common/header';
 import Home from './pages/home';
-import Detail from './pages/detail';
+import Detail from './pages/detail/loadable.js';
 import Login from './pages/login';
 import Write from './pages/write';
 import store from './store';
