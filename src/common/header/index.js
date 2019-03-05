@@ -92,10 +92,12 @@ class Header extends Component {
                     </SearchWrapper>
                 </Nav>
                 <Addition>
-                    <Button className='writing'>
+                    <Link to='/write'>
+                      <Button className='writing'>
                         <i className="iconfont">&#xe615;</i>
                         写文章
-                    </Button>
+                      </Button>
+                    </Link>
                     <Button className='reg'>注册</Button>
                 </Addition>
                 </Link>
@@ -113,7 +115,7 @@ const mapStateToProps = (state) => {
         mouseIn: state.getIn(['header', 'mouseIn']),
         login: state.getIn(['login', 'login'])
     }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -150,5 +152,5 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(loginActionCreators.logout());
         }
     }
-}
+};
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
