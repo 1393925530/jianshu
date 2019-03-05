@@ -33,10 +33,10 @@
     }],
     "recomendList": [{
         "id": 1,
-        "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+        "imgUrl": ""
     }, {
         "id": 2,
-        "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+        "imgUrl": ""
     }]
     }
 }

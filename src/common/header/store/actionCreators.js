@@ -37,6 +37,5 @@ export const getList = () => {
         }).catch(() => {
             console.log('error');
         })
-        console.log('123');
     }
 }
